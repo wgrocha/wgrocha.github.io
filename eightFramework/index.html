@@ -1,1 +1,587 @@
-
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Eight Framework</title>
+	<link rel="stylesheet" href="css/eight.css">	
+	<link rel="stylesheet" href="css/default-theme.css">
+	<link rel="stylesheet" href="css/index.css">
+	<link rel="stylesheet" href="css/prism.css">
+	<link href="https://fonts.googleapis.com/css?family=Poppins%7CNunito" rel="stylesheet">
+	<script src="js/eight.js"></script>
+	<script src="js/prism.js"></script>
+	<script>
+		document.addEventListener ("DOMContentLoaded", () => {
+			var pageTop = document.getElementById ("page-top");
+			if (pageTop == undefined) {
+				return;
+			}
+			pageTop.addEventListener ("click", (event) => {
+				event.preventDefault ();
+				window.scroll({
+					top: 0, 
+					left: 0, 
+					behavior: 'smooth' 
+				});
+			});
+		});
+	</script>
+</head>
+<body>
+	<header class="navigation-header fixed-top">
+		<div class="row v-align-middle">
+			<div class="xlarge-4 large-4 medium-4 small-10 xsmall-10 align-middle">
+				<a href="#" id="page-top"><img src="./img/logo.png" alt="Eight Framework" style="width: 220px;" /></a>
+			</div>
+			<nav class="collapsable-nav xlarge-8 large-8 medium-8 small-2 xsmall-2 align-middle">
+				<ul>
+					<li><a href="#grid-system"><span class="icon icon-newspaper"></span>&nbsp;Colunas</a></li>
+					<li><a href="#icons"><span class="icon icon-image"></span>&nbsp;Ícones</a></li>
+					<li><a href="#tables"><span class="icon icon-table"></span>&nbsp;Tabelas</a></li>
+					<li><a href="#collapsable-menu"><span class="icon icon-mobile"></span>&nbsp;Mobile</a></li>
+					<li><a href="#lists"><span class="icon icon-list"></span>&nbsp;Listas</a></li>
+					<li><a href="#forms"><span class="icon icon-clipboard"></span>&nbsp;Formulários</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	<section id="description">
+		<div class="row">
+			<div class="xlarge-12 align-middle">
+				<h2>O que é o <i>eightFramework</i> ?</h2>
+			</div>
+			<div class="xlarge-12">
+				<p>
+					O <i>eightFramework</i> trata-se de um framework simples e leve para desenvolvimento de páginas web responsivas, criado pensando-se em portabilidade, legibilidade e simplicidade, com o objetivo de apresentar o conteúdo de forma consistente em diferentes tipos de dispositivos. O projeto surgiu a partir de estudos sobre HTML5 e CSS3 como uma maneira de aplicar os conhecimentos adquiridos. Portanto não se trata de um framework completo com centenas de funcionalidades, ainda assim faço uso frequente desta suíte de regras CSS para desenvolvimento de aplicações web mais complexas, realizando apenas alguns ajustes e fazendo uso conjunto com outras ferramentas."</i></p>
+				<p style="text-align:right;">
+					Willian Gabriel Cerqueira da Rocha
+				</p>
+			</div>
+		</div>
+	</section>
+	<section id="features">
+		<div class="row v-align-middle">
+			<div class="xlarge-12 align-middle">
+				<h2>Funcionamento e utilização</h2>
+			</div>
+			<div class="xlarge-3 large-3 medium-3 small-6 align-middle">
+				<h3>Ícones prontos para uso</h3>
+				<img class="feature-image" src="./img/icon-pack/144/gallery-144.png" alt="Coleção de ícones" />
+				<p style="font-size: 13px; margin-left: 15px; margin-right: 15px;">Uma coleção de ícones simples e eficiente, são 290 ícones em formato de fonte e mais 312 em formato de imagem.</p>
+			</div>
+			<div class="xlarge-3 large-3 medium-3 small-6 align-middle">
+				<h3>Fácil de usar</h3>
+				<img class="feature-image" src="./img/icon-pack/144/approve-144.png" alt="Fácil de usar" />
+				<p style="font-size: 13px; margin-left: 15px; margin-right: 15px;">A facilidade de utilização melhora o desempenho e a qualidade do trabalho, basta atribuir classes aos elementos html e é possível criar interfaces fluidas, responsivas e bem estruturadas.</p>
+			</div>
+			<div class="xlarge-3 large-3 medium-3 small-6 align-middle">
+				<h3>Responsivo</h3>
+				<img class="feature-image" src="./img/icon-pack/144/multiple_devices-144.png" alt="Responsivo" />
+				<p style="font-size: 13px; margin-left: 15px; margin-right: 15px;">São as classes dos elementos html que definem como a página será renderizada em diferentes dispositivos. Através de regras simples é possível definir essa visualização de maneira eficiente.</p>
+			</div>
+			<div class="xlarge-3 large-3 medium-3 small-6 xsmall-12 align-middle">
+				<h3>Leve</h3>
+				<span class="icon icon-leaf" style="font-size: 70px; color: #595"></span>
+				<p style="font-size: 13px; margin-left: 15px; margin-right: 15px;">Prático e minimalista, o Eight Framework é extremamente leve, ocupando apenas alguns KB's de espaço em disco.</p>
+			</div>
+		</div>
+	</section>
+	<section id="grid-system-section"> 
+		<div class="row v-align-middle">
+			<div class="xlarge-12 align-middle">
+				<h2>Agradecimentos</h2>
+			</div>
+			<div class="xlarge-12">
+				<p>
+					Agradeço especialmente a dois grandes amigos, <a href="http://github.com/julianoborba" target="_blank">Juliano Falcão Borba</a> por me orientar nos meus estudos em javascript e Cledenir Aquino (cledeniraquino[at]gmail[dot]com) por sempre me ajudar quando o assunto é produzir conteúdo gráfico!
+				</p>
+			</div>
+		</div>
+	</section>
+	<section id="grid-system-section"> 
+		<div class="row v-align-middle">
+			<div class="xlarge-12 align-middle">
+				<a class="anchor" id="grid-system"><h2><span class="icon icon-newspaper"></span>&nbsp;Sistema de colunas</h2></a>
+			</div>
+			<div class="xlarge-12">
+				<p>
+					Para utilizar os recursos do framework basta incluir os arquivos <b><i>eight.css</i></b>, <b><i>default-theme.css</i></b> e <b><i>eight.js</i></b> no header da página:
+				</p>
+				<pre><code class="language-html">&lt;link rel=&quot;stylesheet&quot; href=&quot;css/eight.css&quot;&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;css/default-theme.css&quot;&gt;
+&lt;script src=&quot;js/eight.js&quot;&gt;&lt;/script&gt;</code></pre>
+				<p>
+					O arquivo <b>default-theme.css</b> tem as principais propriedades que podem ser alteradas sem causar problemas no <i>eightFramework</i>, podendo servir portanto como base para criação de diferentes temas para o framework.
+				</p>
+				<p>
+					<b>OBS.: Para o bom funcionamento dos recursos do <i>Eight Framework</i> faz-se necessário o uso da seguinte <i>&lt;meta&gt;</i> tag:</b>
+				</p>
+				<pre><code class="language-html">&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;</code></pre>
+				<p class="note">
+					Leia mais sobre isso <a href="http://www.w3schools.com/css/css_rwd_viewport.asp" target="_blank">aqui</a>.
+				</p><br><br>
+			</div>
+			<div class="xlarge-12">
+				<p>
+					Antes de tudo cabe esclarecer a utilização de containers e da classe <b>full-viewport</b>, o viewport é a área visível que o usuário tem da tela, é possível configurar a página para que ela seja exibida em toda a largura disponível, ou configurar para que apenas seções específicas sejam exibidas assim.
+				</p><br>
+				<p>
+					Para isso, adiciona-se a classe <b>full-viewport</b> ao elemento em questão, esta classe aplica-se às tags <b>body</b>, <b>section</b>, <b>header</b> e <b>footer</b>.
+				</p><br>
+				<p>
+					Se aplicada à tag <b>body</b>, todas as seções do corpo da página ocuparão a largura completa da tela do usuário, independente do tamanho da tela; se aplicada à tags to tipo <b>section</b>, <b>header</b> ou <b>footer</b> apenas aquela tag ocupará o viewport horizontal completo.
+				</p><br>
+				<p>
+					No caso de omissão desta classe, será deixado um espaço vazio dos lados do corpo da página, o conteúdo do body será centralizado na tela, ficando uma margem à direita e uma margem à esquerda. Nos dispositivos do tipo <b>small</b> e <b>extra-small</b> não há diferença entre usar ou não <b>full-viewport</b>, o conteúdo será apresentado em toda a largura disponível da tela destes dispositivo.
+				</p><br>
+				<p>
+					É possível ainda, desejar que um elemento ocupe toda a largura disponível da tela, mas que os elementos internos ocupem apenas a porção central. Para isto utiliza-se uma <b>div</b> com a classe <b>container</b> e coloca-se o conteúdo dentro dela. Veja abaixo as maneiras que pode-se utilizar a classe <b>full-viewport</b> e também a classe <b>container</b>:
+				</p><br>
+			</div>
+			<div class="xlarge-3 large-4 medium-4 small-6 align-middle">
+				<img src="./img/full-viewport0.png" alt="Exemplo de uso de full-viewport" style="width: 200px;">
+			</div>
+			<div class="xlarge-2 large-4 medium-4 small-6 align-middle">
+				<img src="./img/full-viewport1.png" alt="Exemplo de uso de full-viewport" style="width: 200px;">
+			</div>
+			<div class="xlarge-2 large-4 medium-4 small-6 align-middle">
+				<img src="./img/full-viewport2.png" alt="Exemplo de uso de full-viewport" style="width: 200px;">
+			</div>
+			<div class="xlarge-2 large-4 medium-6 small-6 align-middle">
+				<img src="./img/full-viewport3.png" alt="Exemplo de uso de full-viewport" style="width: 200px;">
+			</div>
+			<div class="xlarge-3 large-4 medium-6 small-6 align-middle">
+				<img src="./img/full-viewport4.png" alt="Exemplo de uso de full-viewport" style="width: 200px;">
+			</div>
+			<div class="xlarge-6 large-6 medium-6" style="margin-top: 50px;">
+				<p>
+					O <i>eightFramework</i> utiliza uma divisão da tela em 12 colunas. Para especificar como será feita a apresentação do conteúdo, o programador define quantas colunas serão ocupadas pelos elementos em determinado tipo de dispositivo. É através da atribuição de classes aos elementos html que define-se de que maneira o conteúdo será apresentado. As classes que definem estas características são as seguintes:
+				</p>
+				<p>
+					<b>xlarge-X</b>&emsp;<b>large-X</b>&emsp;<b>medium-X</b>&emsp;<b>small-X</b>&emsp;<b>xsmall-X</b>
+				</p>
+			</div>
+			<div class="xlarge-6 large-6 medium-6">
+				<table class="cell-borders">
+					<caption>Diferentes dispositivos definidos pelo <i>eightFramework</i></caption>
+					<thead>
+						<tr>
+							<th>Tipo de dispositivo</th>
+							<th>Largura da tela (px)</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Extra Large</td>
+							<td>&ge; 1600</td>
+						</tr>
+						<tr>
+							<td>Large</td>
+							<td>1200 ~ 1599</td>
+						</tr>
+						<tr>
+							<td>Medium</td>
+							<td>990 ~ 1199</td>
+						</tr>
+						<tr>
+							<td>Small</td>
+							<td>768 ~ 989</td>
+						</tr>
+						<tr>
+							<td>Extra small</td>
+							<td>&le; 767</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="xlarge-12" style="margin-top: 50px;">
+				<p>Por exemplo, se o programador deseja que determinada div seja apresentada em 1/4 da tela quando o dispositivo for do tipo Large ele deve atribuir a esta div a classe <b>large-3</b>, o que indica que a div irá ocupar três colunas das 12 definidas pelo framework.</p>
+			</div>
+			<div class="xlarge-5 large-5 medium-6">
+				<pre><code class="language-html">&#x3C;div class=&#x22;row&#x22;&#x3E;
+	&#x3C;div class=&#x22;large-3&#x22;&#x3E;Some content&#x3C;/div&#x3E;
+&#x3C;/div&#x3E;</code></pre>
+			</div>
+			<div class="xlarge-7 large-7 medium-6">
+				<p>
+					Caso não seja especificado para um elemento quantas colunas ocupar em determinado dispositivo, ele ocupará automaticamente todas as 12 colunas, note que no exemplo anterior não foi especificado que o elemento deveria ocupar toda a tela para dispositivos diferentes de <b>large</b>, mas esse comportamento é automático.
+				</p>
+				<p>
+					Caso deseje-se que o elemento ocupe toda a largura da tela independente da situação, deve-se atribuir a ele ao menos uma das classes (<b>xlarge-12</b>, <b>large-12</b>, <b>medium-12</b>, <b>small-12</b> ou <b>xsmall-12</b>).
+				</p>
+			</div>
+			<div class="xlarge-12">
+				<p>
+					O sistema de colunas é similar às tableas do html, define-se linha (<b>row</b>) e colunas (<b>xlarge-X, </b><b>large-X</b>, <b>medium-X</b>, <b>small-X</b> e <b>xsmall-X</b>) com a diferença de que usando esse sistema o layout pode ser projetado de maneira eficiente e responsiva. Em alguns casos o uso de <b>colunas</b> fora de <b>linhas</b> pode apresentar resultados totalmente satisfatórios e bem formatados, tanto que pode-se ter visualmente múltiplas linhas apenas com a declaração de colunas (quebra automática), mas é recomendável que sempre utilize-se colunas dentro de linhas, como foi feito no exemplo anterior.
+				</p>
+			</div>
+			<div class="xlarge-5 large-5">
+				<p>
+					Neste outro exemplo são definidas duas colunas que ocupam a mesma linha em telas de tamanho <b>xlarge</b>, <b>large</b>, <b>medium</b> e <b>small</b>. Note que os valores para cada tipo de dispositivo são complementares, a soma deles resulta em <b>12</b>. Caso algum desses valores ultrapasse o número de colunas disponíveis na linha, a coluna será apresentada na próxima linha (quebra automática).
+				</p>
+			</div>
+			<div class="xlarge-7 large-7">
+				<pre><code class="language-html">&#x3C;div class=&#x22;row&#x22;&#x3E;
+	&#x3C;div class=&#x22;xlarge-2 large-2 medium-4 small-6&#x22;&#x3E;Div1&#x3C;/div&#x3E;
+	&#x3C;div class=&#x22;xlarge-10 large-10 medium-8 small-6&#x22;&#x3E;Div2&#x3C;/div&#x3E;
+&#x3C;/div&#x3E;</code></pre>
+			</div>
+			<div class="xlarge-12">
+				<p>
+					Como já dito anteriormente, em caso de omissão, o elemento ocupará todas as 12 colunas, é exatamente o que acontecerá caso o conteúdo deste exemplo seja apresentado em telas de tamanho <b>extra small</b>.
+				</p><br>
+			</div>
+			<div class="xlarge-12">
+				<h4>Colunas e linhas aninhadas</h4>
+				<p>
+					É possível ainda combinar linhas dentro de colunas e colunas dentro de colunas. Anteriormente foi mencionado que é recomendável que se use colunas sempre dentro de linhas, também é recomendável evitar colunas diretamente dentro de colunas, sem uma linha entre elas, isso é recomendável pois há situações em que uma coluna possui muito mais conteúdo que a sua vizinha e é necessários alinhar verticalmente o conteúdo no centro por questão de estética, isso é feito com o uso da classe <b>v-align-middle</b>, que é aplicável somente à elementos da classe <b>row</b>, eis um exemplo:
+				</p>
+			</div>
+			<div class="xlarge-12">
+				<pre><code class="language-html">&#x3C;div class=&#x22;row v-align-middle&#x22;&#x3E;
+&#x9;&#x3C;div class=&#x22;xlarge-6 large-6 medium-4 small-6&#x22;&#x3E;
+&#x9;&#x9;&#x3C;div class=&#x22;row v-align-middle&#x22;&#x3E;
+&#x9;&#x9;&#x9;&#x3C;div class=&#x22;xlarge-6 large-6&#x22;&#x3E;
+&#x9;&#x9;&#x9;&#x9;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pharetra eu lectus nec dictum. Donec euismod orci at tincidunt ultrices. Proin viverra nibh vitae elit fermentum egestas. Suspendisse rhoncus pulvinar nisl, sit amet molestie arcu aliquam vel. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla varius neque vitae semper pellentesque. Phasellus sed mauris bibendum, placerat nisl ac, pretium odio.Fusce vitae magna sed eros condimentum aliquam at in odio.
+&#x9;&#x9;&#x9;&#x3C;/div&#x3E;
+&#x9;&#x9;&#x9;&#x3C;div class=&#x22;xlarge-6 large-6&#x22;&#x3E;
+&#x9;&#x9;&#x9;&#x9;&#x3C;div class=&#x22;row&#x22;&#x3E;
+&#x9;&#x9;&#x9;&#x9;&#x9;&#x3C;div class=&#x22;xlarge-6 large-6&#x22;&#x3E;Something&#x3C;/div&#x3E;
+&#x9;&#x9;&#x9;&#x9;&#x9;&#x3C;div class=&#x22;xlarge-6 large-6&#x22;&#x3E;Something else&#x3C;/div&#x3E;
+&#x9;&#x9;&#x9;&#x9;&#x3C;/div&#x3E;
+&#x9;&#x9;&#x9;&#x3C;/div&#x3E;
+&#x9;&#x9;&#x3C;/div&#x3E;
+&#x9;&#x3C;/div&#x3E;
+&#x9;&#x3C;div class=&#x22;xlarge-6 large-6 medium-8 small-6&#x22;&#x3E;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pharetra eu lectus nec dictum. Donec euismod orci at tincidunt ultrices. Proin viverra nibh vitae elit fermentum egestas. Suspendisse rhoncus pulvinar nisl, sit amet molestie arcu aliquam vel. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla varius neque vitae semper pellentesque. Phasellus sed mauris bibendum, placerat nisl ac, pretium odio.Fusce vitae magna sed eros condimentum aliquam at in odio.&#x3C;/div&#x3E;
+&#x3C;/div&#x3E;</code></pre>
+			</div>
+			<div class="xlarge-6 large-6 medium-6">
+				<h4>Deslocamento de colunas</h4>
+				<p>
+					Pode haver algum caso em que seja necessário deslocar colunas que não ocupam todo o espaço disponível da linha, para isso existem as seguintes classes, em que X é o número de colunas a deslocar para a direita:
+				</p><br>
+				<ul>
+					<li>xlarge-offset-X</li>
+					<li>large-offset-X</li>
+					<li>medium-offset-X</li>
+					<li>small-offset-X</li>
+					<li>xsmall-offset-X</li>
+				</ul>
+			</div>
+			<div class="xlarge-6 large-6 medium-6">
+				<br>
+				<pre><code class="language-html">&#x3C;div class=&#x22;row v-align-middle&#x22;&#x3E;
+&#x9;&#x3C;div class=&#x22;xlarge-4&#x22;&#x3E;
+&#x9;&#x9;Some content
+&#x9;&#x3C;/div&#x3E;
+&#x9;&#x3C;div class=&#x22;xlarge-4 xlarge-offset-5&#x22;&#x3E;
+&#x9;&#x9;More content
+&#x9;&#x3C;/div&#x3E;
+&#x3C;/div&#x3E;</code></pre>
+			</div>
+			<div class="xlarge-12">
+				<br>
+				<p>
+					Repare que no exemplo anterior sobrou um espaço de 4 colunas entre as duas divs definidas, isso ocorre porque houve um desolcamento para a direita; em telas <b>xlarge</b> o conteúdo da segunda div irá iniciar na quinta coluna a contar do final da primeira div.
+				</p>
+			</div>
+			<div class="xlarge-12">
+				<h4>Ocultando elementos seletivamente</h4>
+				<p>
+					É possível ocultar elementos a depender do tipo de dispositivo que estiver sendo utilizado.
+				</p>
+				<p>
+					Isso é feito com a atribuição das seguintes classes:
+				</p><br>
+				<ul>
+					<li><b>xlarge-hide</b>&nbsp;&nbsp;<span style="color:#555;"><i>Oculta o elemento em telas do tipo xlarge</i></span></li>
+					<li><b>large-hide</b>&nbsp;&nbsp;<span style="color:#555;"><i>Oculta o elemento em telas do tipo large</i></span></li>
+					<li><b>medium-hide</b>&nbsp;&nbsp;<span style="color:#555;"><i>Oculta o elemento em telas do tipo medium</i></span></li>
+					<li><b>small-hide</b>&nbsp;&nbsp;<span style="color:#555;"><i>Oculta o elemento em telas do tipo small</i></span></li>
+					<li><b>xsmall-hide</b>&nbsp;&nbsp;<span style="color:#555;"><i>Oculta o elemento em telas do tipo xsmall</i></span></li>
+				</ul>
+			</div>
+		</div>
+	</section>
+	<section id="icons-section">
+		<div class="row">
+			<div class="xlarge-12 align-middle">
+				<a class="anchor" id="icons"><h2><span class="icon icon-images"></span>&nbsp;Ícones</h2></a>
+			</div>
+			<div class="xlarge-12">
+				<p>
+					O <i>eightFramework</i> conta com uma coleção de 290 ícones em formato True Type e Woff. Estes ícones foram obtidos em <a href="http://icomoon.io" target="_blank">icomoon.io</a>.
+					Eles podem ser utilizados nos formulários, nas listas e de maneira independente em qualquer parte da página.
+					Nesta seção será explicado apenas o uso de ícones em partes independentes da página; para saber como usar em formulários e listas siga para as seções específicas.
+				</p>
+			</div>
+			<div class="xlarge-12">
+				<p>
+					Para utilizar ícones é recomendado o uso da tag <b>span</b>, apesar de que outras tags como <b>p</b>, <b>div</b>, <b>i</b>, <b>b</b>, entre outras, também funcionam normalmente.<br>Veja o exemplo a seguir:
+				</p><br>
+				<pre><code class="language-html">&lt;span id=&quot;myIcon&quot; class=&quot;icon icon-home&quot;&gt;&lt;/span&gt;&lt;!--Sintaxe recomendada--&gt;
+&lt;span class=&quot;icon&quot;&gt;icon-home&lt;/span&gt;&lt;!-- Ligature --&gt;</code></pre>
+			</div>
+			<div class="xlarge-12 large-12">
+				<p>
+					No segundo caso está sendo usado um recurso denominado <b>ligature</b>, compatível apenas com navegadores mais modernos, por isso é recomendável a primeira sintaxe. Como os ícones estão em formato de fonte então é possível customizá-los com uso de css da maneira convencional:
+				</p>
+			</div>
+			<div class="xlarge-8 large-8 medium-8 small-6">
+				<pre><code class="language-css">#icon-example {
+&#x9;font-size: 100px;
+&#x9;background-color: #0af;
+&#x9;color: #555;
+&#x9;padding: 10px;
+&#x9;border: 3px solid #555;
+&#x9;border-radius: 15px;
+}</code></pre>
+			</div>
+			<div class="xlarge-4 large-4 medium-4 small-6 align-middle">
+				<p>
+					A saída será essa:
+				</p>
+				<p>
+					<span id="icon-example" class="icon icon-home"></span>
+				</p>
+				
+			</div>
+			<div class="xlarge-12">
+				<p>
+					<a target="_blank" href="icomoon/demo.html">Aqui</a> pode ser acessada a lista completa dos ícones disponíveis em formato de fonte.
+				</p>
+			</div>
+			<div class="xlarge-12">
+				<p>
+					Além destes 290 ícones em formato de fonte, existe também uma coleção de 312 ícones em formato <b>PNG</b>, em 144x144 pixels e 48x48 pixels, disponíveis na pasta <b>img/icon-pack/</b></p>
+				<p>
+					Esta segunda coleção de ícones foi obtida <a href="https://github.com/icons8/flat-color-icons" target="_blank">neste link</a> e dispensa a necessidade de atribuição de créditos.
+				</p>
+			</div>
+		</div>
+	</section>
+	<section id="tables-section">
+		<div class="row v-align-middle">
+			<div class="xlarge-12 align-middle">
+				<a class="anchor" id="tables"><h2><span class="icon icon-table"></span>&nbsp;Tabelas</h2></a>
+			</div>
+			<div class="xlarge-12">
+				<p>
+					Tabelas podem ser utilizadas da maneira padrão pois as únicas modificações que o <i>eightFramework</i> aplica a elas são em estilo, não há modificações na lógica, estrutura ou usabilidade. São definidas apenas duas classes para as tabelas, são elas <b>rounded-borders</b> e <b>cell-borders</b>, elas podem ser utilizadas idividualmente ou em conjunto; <b>rounded-borders</b> aplica bordas arredondadas à tabela e <b>cell-borders</b> adiciona bordas internas (que por padrão estão desativadas):
+				</p>
+			</div>
+			<div class="xlarge-6 large-6 medium-6">
+				<pre><code class="language-html">&#x3C;table class=&#x22;cell-borders rounded-borders&#x22;&#x3E;
+&#x9;&#x3C;caption&#x3E;An example&#x3C;/caption&#x3E;
+&#x9;&#x3C;thead&#x3E;
+&#x9;&#x9;&#x3C;tr&#x3E;
+&#x9;&#x9;&#x9;&#x3C;th&#x3E;first column header&#x3C;/th&#x3E;
+&#x9;&#x9;&#x9;&#x3C;th&#x3E;second column header&#x3C;/th&#x3E;
+&#x9;&#x9;&#x9;&#x3C;th&#x3E;third column header&#x3C;/th&#x3E;
+&#x9;&#x9;&#x3C;/tr&#x3E;
+&#x9;&#x3C;/thead&#x3E;
+&#x9;&#x3C;tbody&#x3E;
+&#x9;&#x9;&#x3C;tr&#x3E;
+&#x9;&#x9;&#x9;&#x3C;td&#x3E;1.1 data&#x3C;/td&#x3E;
+&#x9;&#x9;&#x9;&#x3C;td&#x3E;1.2 data&#x3C;/td&#x3E;
+&#x9;&#x9;&#x9;&#x3C;td&#x3E;1.3 data&#x3C;/td&#x3E;
+&#x9;&#x9;&#x3C;/tr&#x3E;
+&#x9;&#x9;&#x3C;tr&#x3E;
+&#x9;&#x9;&#x9;&#x3C;td&#x3E;2.1 data&#x3C;/td&#x3E;
+&#x9;&#x9;&#x9;&#x3C;td&#x3E;2.2 data&#x3C;/td&#x3E;
+&#x9;&#x9;&#x9;&#x3C;td&#x3E;2.3 data&#x3C;/td&#x3E;
+&#x9;&#x9;&#x3C;/tr&#x3E;
+&#x9;&#x3C;/tbody&#x3E;
+&#x3C;/table&#x3E;</code></pre>
+			</div>
+			<div class="xlarge-6 large-6 medium-6">
+				<table class="cell-borders rounded-borders">
+					<caption>An example</caption>
+					<thead>
+						<tr>
+							<th>first column</th>
+							<th>second column</th>
+							<th>third column</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>1.1 data</td>
+							<td>1.2 data</td>
+							<td>1.3 data</td>
+						</tr>
+						<tr>
+							<td>2.1 data</td>
+							<td>2.2 data</td>
+							<td>2.3 data</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</section>
+	<section id="collapsable-menu-section">
+		<div class="row v-align-middle">
+			<div class="xlarge-12 align-middle">
+				<a class="anchor" id="collapsable-menu"><h2><span class="icon icon-mobile"></span>&nbsp;Mobile</h2></a>
+			</div>
+			<div class="xlarge-12">
+				<p>
+					É possível fazer uso de um menu de navegação colapsável, muito útil para telas pequenas e dispositivos móveis.</p><p>Para uilizá-lo é necessário definir a seguinte estrutura:
+				</p><br>
+				<pre><code class="language-html">&lt;header class=&quot;navigation-header fixed-top&quot;&gt;
+	&lt;div class=&quot;row v-align-middle&quot;&gt;
+		&lt;div class=&quot;xlarge-4 xlarge-offset-2 large-4 large-offset-2 medium-5 medium-offset-2 small-10 xsmall-9&quot;&gt;
+			&lt;h1&gt;Places to visit&lt;/h1&gt;
+		&lt;/div&gt;
+		&lt;nav class=&quot;collapsable-nav xlarge-4 xlarge-offset-3 large-4 large-offset-3 medium-5 small-2 xsmall-3&quot;&gt;
+			&lt;ul&gt;
+				&lt;li&gt;&lt;a href=&quot;#streets&quot;&gt;Streets&lt;/a&gt;&lt;/li&gt;
+				&lt;li&gt;&lt;a href=&quot;#bridges&quot;&gt;Bridges&lt;/a&gt;&lt;/li&gt;
+				&lt;li&gt;&lt;a href=&quot;#markets&quot;&gt;Markets&lt;/a&gt;&lt;/li&gt;
+				&lt;li&gt;&lt;a href=&quot;#restaurants&quot;&gt;Restaurants&lt;/a&gt;&lt;/li&gt;
+				&lt;li&gt;&lt;a href=&quot;#schools&quot;&gt;Schools&lt;/a&gt;&lt;/li&gt;
+			&lt;/ul&gt;
+		&lt;/nav&gt;
+	&lt;/div&gt;
+&lt;/header&gt;</code></pre>
+			</div>
+			<div class="xlarge-12">
+				<p>
+					O essencial para que o menu funcione é que a classe <b>navigation-header</b> seja atribuída ao <b>header</b> e que exista uma tag <b>nav</b> dentro deste header. A essa tag <b>nav</b> deve ser atribuída a classe <b>collapsable-nav</b>, dentro desta <b>nav</b> deve-se então definir uma lista com os links que serão utilizados no menu de navegação.
+				</p>
+				<p>
+					O menu irá colapsar em telas de tamanho <b>small</b> e <b>xsmall</b>.</p><p>A hierarquia deve ser a seguinte:
+				</p>
+			</div>
+			<div class="xlarge-12">
+				<img src="img/collapsable-hierarchy.jpg" alt="collapsable-hierarchy">
+			</div>
+			<div class="xlarge-12">
+				<p>
+					Ao atribuir a classe <b>navigation-header</b> ao <b>header</b>, ele será customizado de acordo com o padrão do framework. Caso deseje-se utilizá-lo para outra finalidade que não seja um menu de navegação, evite o uso da classe <b>navigation-header</b>.
+				</p>
+				<p>
+					Para fixar o menu no topo da janela do browser é preciso atribuir a classe <b>fixed-top</b> a ele, assim ele ficará visível todo o tempo enquanto o usuário navega pela página. Há de se destacar que quando o <b>header</b> possuir a classe <b>fixed-top</b> ele deixará de fazer parte do fluxo padrão da página, então será necessário configurar uma margem para a próxima seção do documento (que corresponda à altura ocupada pelo header).
+				</p>
+				<p>
+					Para uma boa formatação, deve-se definir apenas uma <b>row</b> dentro do header e a tag <b>nav</b> deve ser filha imediata desta <b>row</b>. A tag <b>nav</b> também deve representar colunas desta <b>row</b>.
+				</p>
+			</div>
+		</div>
+	</section>
+	<section id="lists-section">
+		<div class="row v-align-middle">
+			<div class="xlarge-12 align-middle">
+				<a class="anchor" id="lists"><h2><span class="icon icon-list"></span>&nbsp;Listas</h2></a>
+			</div>
+			<div class="xlarge-12">
+				<p>
+					Assim como as tabelas, as listas não possuem muita diferença da formatação e comportamento padrão, a única diferença é que o framework permite a atribuição de ícones aos elementos de listas não ordenadas. Isso pode ser feito atribuido a classe <b>ico-list</b> à tag <b>ul</b> e atribuindo então ícones para os itens da lista. Veja o exemplo:
+				</p>
+			</div>
+			<div class="xlarge-4 large-4 medium-4 small-6">
+				<pre><code class="language-html">&#x3C;ul class=&#x22;ico-list&#x22;&#x3E;
+&#x9;&#x3C;li class=&#x22;icon-search&#x22;&#x3E;Item1&#x3C;/li&#x3E;
+&#x9;&#x3C;li class=&#x22;icon-instagram&#x22;&#x3E;Item2&#x3C;/li&#x3E;
+&#x9;&#x3C;li class=&#x22;icon-google3&#x22;&#x3E;Item3&#x3C;/li&#x3E;
+&#x9;&#x3C;li class=&#x22;icon-facebook&#x22;&#x3E;Item4&#x3C;/li&#x3E;
+&#x9;&#x3C;li class=&#x22;icon-vimeo&#x22;&#x3E;Item5&#x3C;/li&#x3E;
+&#x3C;/ul&#x3E;</code></pre>
+			</div>
+			<div class="xlarge-4 large-4 medium-4 small-6 xsmall-4 align-middle">
+				<ul class="ico-list">
+					<li class="icon-search">Item1</li>
+					<li class="icon-instagram">Item2</li>
+					<li class="icon-google3">Item3</li>
+					<li class="icon-facebook">Item4</li>
+					<li class="icon-vimeo">Item5</li>
+				</ul>
+			</div>
+			<div class="xlarge-4 large-4 medium-4 xsmall-8">
+				<p>
+					A atribuição de uma classe <b>icon-{something}</b> para cada elemento da lista serve para especificar o ícone que será utilizado para aquele item, note que caso não seja atribuída a classe <b>ico-list</b> à tag <b>ul</b>, os ícones não serão renderizados. Veja <a target="_blank" href="icomoon/demo.html">aqui</a> a lista completa de ícones disponíveis.
+				</p>
+			</div>
+		</div>
+	</section>
+	<section class="forms-section">
+		<div class="row v-align-middle">
+			<div class="xlarge-12 align-middle">
+				<a class="anchor" id="forms"><h2><span class="icon icon-file-text2"></span>&nbsp;Formulários</h2></a>
+			</div>
+			<div class="large-12">
+				<p>
+					Os elementos mais comuns de formulários contam com formatação de estilos aplicada pelo <i>eightFramework</i> com o objetivo de assimilar um design particular a eles, veja o exemplo:
+				</p>
+			</div>
+			<div class="xlarge-7 large-7 medium-7">
+				<pre><code class="language-html">&lt;form&gt;
+&#x9;&lt;fieldset&gt;
+&#x9;&#x9;&lt;legend&gt;Login&lt;/legend&gt;
+&#x9;&#x9;&lt;p&gt;&lt;label for=&quot;username&quot;&gt;Usuário:&nbsp;&lt;/label&gt;&lt;input type=&quot;text&quot;name=&quot;username&quot;&gt;&lt;/p&gt;
+&#x9;&#x9;&lt;p&gt;&lt;label for=&quot;userpass&quot;&gt;Senha:&nbsp;&lt;/label&gt;&lt;input type=&quot;password&quot; name=&quot;userpass&quot;&gt;&lt;/p&gt;
+&#x9;&#x9;&lt;p&gt;&lt;input class=&quot;blue-button&quot; type=&quot;submit&quot; name=&quot;send&quot; value=&quot;Send&quot; onclick=&quot;return;&quot;&gt;&lt;/p&gt;
+&#x9;&lt;/fieldset&gt;
+&lt;/form&gt;</code></pre>
+			</div>
+			<div class="xlarge-5 large-5 medium-5 align-middle">
+				<form onsubmit="return false;">
+					<fieldset>
+						<legend>Login</legend>
+						<p><label for="username">Usuário: </label><input type="text" id="username"></p>
+						<p><label for="userpass">Senha: </label><input type="password" id="userpass"></p>
+						<p><input class="blue-button" type="submit" name="send" value="Send" onclick="return;"></p>
+					</fieldset>
+				</form>	
+			</div>
+			<div class="xlarge-12">
+				<p>
+					Como pode-se notar, neste exemplo há a atribuição da classe <b>blue-button</b> ao botão de submissão do formulário, o <i>eightFramework</i> define dois tipos de botões, são eles <b>blue-button</b> e <b>green-button</b>, como o nome sugere, a diferença entre eles é apenas a cor. Essas classes são aplicáveis a <b>inputs</b> do tipo <b>submit</b> e <b>reset</b> e a elementos do tipo <b>button</b>.
+				</p>
+				<p>
+					Por padrão o fieldset é renderizado com uma borda cinza claro, para remover basta atribuir a ele a classe <b>no-border</b>.
+				</p>
+				<p>
+					Também é possível utilizar ícones dentro dos <b>inputs</b>, para isso é necessário usar uma tag como container e atribuir a esta tag a classe <b>ico-input</b> e tabém a classe correspondente ao ícone, veja o exemplo, agora com ícones e sem bordas no <b>fieldset</b>:
+				</p>
+			</div>
+			<div class="xlarge-7 large-7 medium-7">
+				<pre><code class="language-html">&lt;form&gt;
+&#x9;&lt;fieldset class=&quot;no-border&quot;&gt;
+&#x9;&#x9;&lt;legend&gt;Login&lt;/legend&gt;
+&#x9;&#x9;&lt;p&gt;&lt;label for=&quot;username&quot;&gt;Usuário: &lt;/label&gt;&lt;span class=&quot;ico-input icon-user&quot;&gt;&lt;input type=&quot;text&quot; name=&quot;username&quot;&gt;&lt;/span&gt;&lt;/p&gt;
+&#x9;&#x9;&lt;p&gt;&lt;label for=&quot;userpass&quot;&gt;Senha: &lt;/label&gt;&lt;span class=&quot;ico-input icon-lock&quot;&gt;&lt;input type=&quot;password&quot; name=&quot;userpass&quot;&gt;&lt;/span&gt;&lt;/p&gt;
+&#x9;&#x9;&lt;p&gt;&lt;input class=&quot;green-button&quot; type=&quot;submit&quot; name=&quot;send&quot; value=&quot;Send&quot; onclick=&quot;return;&quot;&gt;&lt;/p&gt;
+&#x9;&lt;/fieldset&gt;
+&lt;/form&gt;</code></pre>
+			</div>
+			<div class="xlarge-5 large-5 medium-5 align-middle">
+				<form>
+					<fieldset class="no-border">
+						<legend>Login</legend>
+						<p><label for="usern">Usuário: </label><span class="ico-input icon-user"><input type="text" id="usern"></span></p>
+						<p><label for="userp">Senha: </label><span class="ico-input icon-lock"><input type="password" id="userp"></span></p>
+						<p><input class="green-button" type="submit" name="send" value="Send" onclick="return;"></p>
+					</fieldset>
+				</form>
+			</div>
+			<div class="large-12">
+				<p>
+					Para customizar os ícones deve-se alterar as propriedades da tag que está servindo de container para o <b>input</b>.
+				</p>
+				<p style="text-align: right"><i>May the Force be with you!</i></p>
+			</div>
+		</div>
+	</section>
+	<footer>
+		<div id="copyright" class="row v-align-middle">
+			<div class="large-12">
+				eightFramework &copy; 2017-2018 Willian Gabriel Cerqueira da Rocha. All Rights Reserved.<br>
+				IcoMoon by <a target="_blank" href="http://keyamoon.com/">Keyamoon</a> is licensed under a <a rel="license" target="_blank" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons 4.0 International License</a>.
+			</div>
+		</div>
+	</footer>
+</body>
+</html>

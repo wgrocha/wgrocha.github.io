@@ -1,0 +1,55 @@
+#features {
+	margin-top: 80px;
+}
+.feature-image {
+	width: 100px;
+}
+code {
+	font-size: 14px;
+	line-height: 1.3em;
+}
+h1 {
+	font-size: 27px;
+	text-align: center;
+}
+h2 {
+	padding-bottom: 20px;
+	padding-top: 25px;
+	font-size: 19px;
+	font-weight: bold;
+}
+h3 {
+	padding-bottom: 20px;
+	padding-top: 25px;
+	font-size: 19px;
+	font-weight: bold;
+}
+h4 {
+	padding-bottom: 15px;
+	padding-top: 25px;
+	font-size: 17px;
+	font-weight: bold;
+}
+pre {
+	overflow: auto !important;
+}
+.note {
+	font-size: 15px; 
+	text-align: right; 
+	line-height: 1em;
+	padding: 0px;
+}
+#icon-example {
+	font-size: 88px;
+	background-color: #0af;
+	color: #555;
+	padding: 10px;
+	border: 3px solid #555;
+	border-radius: 15px;
+}
+caption { 
+	font-size: 12px;
+}
+form p {
+	padding: 5px;
+}
