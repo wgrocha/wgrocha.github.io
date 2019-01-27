@@ -1,0 +1,16 @@
+#canvas0 {
+	width: 300px;
+	background: #f3f3f3;
+	border: 1px solid #ccc;
+	margin-left: calc(50% - 150px);
+}
+#container-dados {
+	padding-top: 10px;
+	float: center;
+}
+#container-geracao {
+	padding-top: 10px;
+}
+#container-distancia {
+	padding-top: 10px;
+}
