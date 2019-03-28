@@ -8,14 +8,14 @@ body {
 	color: #fff;
 	font-size: 15px;
 	line-height: 1.5em;
-	background-color: #223149;
+	background-color: #324b6e;
 }
 /* Cor de fundo do conteúdo principal, útil quando não se utiliza full-viewport para a tag body */
 section .row {
-	background-color: #223149;
+	background-color: #324b6e;
 }
 section .row * {
-	background-color: #223149;
+	background-color: #324b6e;
 }
 /* Espaçamento lateral nas rows */
 @media (min-width: 768px) {
