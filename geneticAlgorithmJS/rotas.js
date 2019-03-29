@@ -123,8 +123,8 @@ document.addEventListener ("DOMContentLoaded", () => {
 					maiorNota = Math.max (...notas);
 				}
 				geracaoAtual.innerHTML  = contadorGeracao;
-				melhorDistancia.innerHTML  = Math.min(...notas);
-				maiorDistancia.innerHTML = maiorNota;
+				melhorDistancia.innerHTML  = parseFloat(Math.round(Math.min(...notas) * 100) / 100).toFixed(2);
+				maiorDistancia.innerHTML = parseFloat(Math.round(maiorNota * 100) / 100).toFixed(2);
 
 				populacaoPrincipal = realizarCruzamento(populacaoPrincipal, notas);
 				populacaoPrincipal = realizarMutacoes(populacaoPrincipal);	
