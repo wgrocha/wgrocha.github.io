@@ -363,40 +363,6 @@ header.full-viewport {
 	/* border: 1px solid red; */
 }
 /* A container to lock the width of the elements based on the screeen size */
-@media (max-width: 767px) {
-	.container {
-		position: relative;
-		width: 100%;
-		padding: 0px;
-	}
-}
-@media (min-width: 768px) and (max-width: 989px) {
-	.container {
-		position: relative;
-		width: 750px;
-		margin-left: auto;
-		margin-right: auto;
-		padding: 0px;
-	}
-}
-@media (min-width: 990px) and (max-width: 1199px) {
-	.container {
-		position: relative;
-		width: 970px;
-		margin-left: auto;
-		margin-right: auto;
-		padding: 0px;
-	}
-}
-@media (min-width: 1200px) and (max-width: 1599px) {
-	.container {
-		position: relative;
-		width: 1170px;
-		margin-left: auto;
-		margin-right: auto;
-		padding: 0px;
-	}
-}
 @media (min-width: 1600px) {
 	.container {
 		position: relative;
