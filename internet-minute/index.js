@@ -1,5 +1,5 @@
 let chartTitle = "A internet em 60 segundos";
-let labels = new Array("Scrolls no Instagram", "Downloads Play Store e App Store", "Horas assistidas na Netflix", "Compras realizadas ($)", "Visualizações no Twitch", "Logins no Facebook", "Swipes no Tinder", "Snaps criados", "Pesquisas no Google", "Views no Youtube", "E-mails enviados");
+let labels = new Array("Scrolls no Instagram", "Downloads Play Store e App Store", "Horas assistidas na Netflix", "Compras realizadas ($)", "Visualizações no Twitch", "Logins no Facebook", "Swipes no Tinder", "Pesquisas no Google", "Views no Youtube", "E-mails enviados");
 let data2018 = new Array(174000, 375000, 266000, 862823, 936073, 973000, 1100000, 3700000, 4300000, 187000000);
 let data2019 = new Array(347222, 390030, 694444, 996956, 1000000, 1000000, 1400000, 3800000, 4500000, 188000000);
 let difference = data2019.map((d19, index) => {
