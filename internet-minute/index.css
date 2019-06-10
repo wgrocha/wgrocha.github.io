@@ -2,6 +2,17 @@ body {
 	margin-top: 25px;
 	background-color: #fff;
 }
+@media (min-width: 500px) {
+	#small-screen {
+		display: none;
+	}
+}
+@media (max-width: 499px) {
+	#large-screen {
+		display: none;
+	}
+}
+
 #chart0-div {
 	width: 99vw;
 	height: 85vh;

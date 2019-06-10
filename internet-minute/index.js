@@ -13,7 +13,6 @@ let difference = data2019.map((d19, index) => {
 });
 
 document.addEventListener("DOMContentLoaded", createChart0 = () => {
-	console.log(difference);
 	let trace2018 = {
 		x: data2018,
 		y: labels,
