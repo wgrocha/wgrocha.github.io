@@ -1,0 +1,20 @@
+body {
+	margin-top: 25px;
+	background-color: #fff;
+}
+#chart0-div {
+	width: 99vw;
+	height: 85vh;
+	margin: auto;
+}
+#logos-div {
+	text-align: center;
+}
+#logos-div img {
+	width: auto;
+	height: 30px;
+	margin: 2px;
+}
+.modebar{
+	display: none !important;
+}
