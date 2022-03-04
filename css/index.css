@@ -84,23 +84,23 @@ footer .row {
 	font-size: 50px;
 }
 @media (min-width: 990px) {
-	#about-me, #education, #experience, #skills {
+	#about-me, #education, #experience, #licenses-and-certificates {
 		text-align: right;
 	}
 }
-#about-me, #education, #experience, #skills {
+#about-me, #education, #experience, #licenses-and-certificates, #skills {
 	padding-right: 50px;
 	padding-left: 50px;
 }
-#projects, #contact {
+#skills, #projects, #contact {
 	text-align: left;
 	padding-left: 50px;
 	padding-right: 50px;
 }
 .skill-bar {
-	float: right;
+	float: left;
 	margin-top: 10px;
-	margin-left: 10px;
+	margin-right: 10px;
 	width: 200px;
 	height: 6px;
 	background-color: white;
